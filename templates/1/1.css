@@ -1,0 +1,758 @@
+/**
+ *   https://09source.kicks-ass.net:8443/svn/installer09/
+ *   Licence Info: GPL
+ *   Copyright (C) 2010 Installer09 v.1
+ *   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.
+ *   Project Leaders: Mindless,putyn,kidvision.
+ *   ##########################################
+ *   Basic Skin v.2 By Bittorrent Skins
+ *   Created with CSS3 & Xhtml (IE Fixed)
+ **/
+@import "bbcode.css";
+/** Basic CSS Settings ------------------------------------------------------------------- */
+body {
+    font-family: "trebuchet MS"; font-size: 8pt; color: #303030;
+    background: #e8ecf1;
+    margin-top: 10px; margin-bottom: 20px;}
+div#base_around {
+    width: 1004px; background: #dbe3ea; border: 1px solid #97bcc2;
+    margin: 0 auto;}
+div#base_content {
+    width: 988px; margin: 0 auto; border: 1px solid #97bcc2; margin-top: 5px; margin-bottom: 5px;
+    background: #e8ecf1;}
+@font-face {
+    font-family: 'trebuchet';
+    src: url('fonts/trebuchet.eot');
+    src: local('?'),
+    url('fonts/trebuchet.woff') format('woff'),
+    url('fonts/trebuchet.ttf') format('truetype');} 
+/** Images Settings ---------------------------------------------------------------------- */
+img{ border: 0; vertical-align: middle;}
+/** Basic Links Settings ----------------------------------------------------------------- */
+.sublink {
+    font-style: italic; font-size: 7pt; font-weight: normal; }
+a, a:visited, a:active {
+    text-decoration: none; color: #1a3b5d; }
+a:hover {
+    color: #376c9a;}
+a.index {
+    font-weight: bold;}
+a.biglink {
+    font-weight: bold; font-size: 12pt;}
+a.altlink:link, a.altlink:visited{
+    font-weight: bold; color: #1a3b5d; text-decoration: none;}
+a.altlink:hover {
+    text-decoration: underline; color:#376c9a}
+a.altlink_blue:link, a.altlink_blue:visited{
+    font-weight: bold; color: #1a3b5d; text-decoration: none;}
+a.altlink_blue:hover {
+    text-decoration: underline; color: #376c9a}
+a.altlink_green:link, a.altlink_green:visited{
+    font-weight: bold; color: #1a3b5d; text-decoration: none;}
+a.altlink_green:hover {
+    text-decoration: underline; color:#376c9a}
+a.colheadlink:link, a.colheadlink:visited {
+    font-weight: bold; color: #1a3b5d; text-decoration: none;}
+a.colheadlink:hover {
+    text-decoration: underline; color: #376c9a}
+a.altlink_white:link, a.altlink_white:visited{
+    font-weight: bold; color: #1a3b5d; text-decoration: none; }
+a.altlink_white:hover {
+  text-decoration: underline; color: #376c9a}
+/** Anything else Settings --------------------------------------------------------------- */
+.balloonstyle{
+    position:absolute; top: -500px; left: 0; padding: 5px; visibility: hidden;
+    border:1px solid #EAFF08; font:normal 12px arial; color: #FF6600; line-height: 18px;
+    z-index: 100; background-color: #FFFFD4; width: 400px; }
+a.info{
+    position:relative; z-index:24; color:#000; text-decoration:none}
+a.info:hover{
+    z-index:25; background-color:#ff0}
+a.info span{
+    display: none}
+a.info:hover span{
+    display:block; position:absolute; top:2em; left:2em; width:15em;
+    border:1px solid #0cf; background-color:#cff; color:#000; text-align: center}
+.codetop {
+    background: #0099FF url(pic/code.jpg) no-repeat right; color: #000; font-weight: bold;
+    margin: 0 auto 0 auto; padding: 3px; border: 1px solid #000; width:500px; }
+.codemain {
+    background: #FFF; border: 1px solid #000; color: #000; margin: 0 auto 0 auto;
+    padding: 3px; width:500px; overflow:auto; height:150px; }
+span.tool {
+    position: relative; cursor: help; }
+span.tool span.tip {
+    white-space: nowrap; display: none; }
+span.tool:hover span.tip {
+    display: block; z-index: 100; position: absolute; top: 1.6em; left: 0;
+    width: auto; padding: 3px 7px 4px 6px; border: 1px solid #336; background-color: #f7f7ee;
+    font: normal 1.2em/1.2em tahoma, helvetica, sans-serif; text-align: left; color: #000; }
+#content span.tool::after {
+    padding-left: 2px; content: url(pic/bubble.gif); }
+#iconbar { 
+    position:absolute; margin-top: 80px; padding-left: 50px; }
+#iconbar li	{
+    float:left; position:relative; margin-right:10px;
+    overflow:hidden; font-family: "arial"; }
+#iconbar a {
+    font-family: "arial"; text-decoration: none; outline: none;
+    color:#1f1f1f; display: block; width: 58px; padding: 5px; cursor:pointer; }
+#iconbar span	{
+    font-family: "arial"; width: 58px; height: 38px; position: absolute; display: none;
+color:#1f1f1f; font-size: 8px; line-height: 8px; font-weight: bold; padding-left: 2px; padding-top: 10px; }
+#rollover{
+    display: inline-table; width: 55px; height: 20px; line-height:20px; background: url(pic/button.png) no-repeat 0 0;
+    background-repeat: no-repeat; background-position: left top; text-align: center; }
+#rollover:hover {
+    background-position: 0 -20px; }
+#rollover span {
+    display: none;}
+#middle {
+    margin-top: auto; margin-right: auto; margin-bottom: auto; margin-left: auto; background-image: url(pic/evilreels.png); 
+    background-repeat: no-repeat; background-position: center;width: auto; }
+#marqueecontainer{
+    position: relative; width: 99%; height: 120px; background-color:lightyellow; color:black;
+    overflow: hidden; border: 1px solid blue; padding: 2px; padding-left: 4px; text-align:left; }
+#marqueecontainer img {
+    border-width:2px; border-style:solid;}
+.sent, .notsent {
+	width:100%; padding:5px; margin:5px; border:1px solid;
+	color:#333333; text-align:left; font-weight:bold;}
+.sent {
+    border-color: #49c24f; background:#bcffbf; }
+.notsent {
+    border-color: #c24949; background:#ffbcbc; }
+/** Popup Settings ----------------------------------------------------------------------- */
+.popupmenu {
+    background: #C2CFDF; color: #3A4F6C; border: 1px solid #3A4F6C; text-align:left;
+    font-size:11px; font-weight:bold; white-space:nowrap; }
+.popupmenu-item {
+    padding: 5px; white-space: nowrap; border-bottom: 1px solid #C2CFDF;
+    color:  #000000; font-weight: normal;}
+.popupmenu-item-last {
+    padding: 5px; white-space: nowrap; color:  #000000; font-weight: normal; }
+.popupmenubutton {
+    background: #C2CFDF; color: #3A4F6C; border: 1px solid #3A4F6C; text-align:center;
+font-size:11px; font-weight:bold; white-space:nowrap; height:18px; width:120px; }
+.popupmenu-item a:link, .popupmenu-item a:visited, .popupmenu-item-last a:link, 
+.popupmenu-item-last a:visited { 
+    color: #000; text-decoration: none; }
+.popupmenu-item a:hover, .popupmenu-item-last a:hover{ 
+    color: #EA5F00; text-decoration: none;}
+.tbi {
+    vertical-align:middle; border:0px; padding:0px; margin:0px; float:none; }
+/** UL - LI Settings --------------------------------------------------------------------- */
+li {
+    margin-top: 6pt; margin-bottom: 6pt; }
+ul {
+    margin-left: 16pt; margin-top: 0px; margin-bottom: 0px;}
+/** Input - Form Settings ---------------------------------------------------------------- */
+form {
+    display: inline; margin-top: 0; margin-bottom: 0; padding: 0;}
+input, select, textarea {
+    background: #FFF; border: 1px solid #00326A; color: #000; font-family: arial, helvetica, sans-serif;
+    font-size: 11px; margin: 5px; padding: 2px; vertical-align: middle; }
+input:focus { 
+    background-color: #FFFF99; }
+textarea:focus {
+    background-color: #FFFF99; }
+select{
+    margin: 0px;}
+.btn{
+    font-size:12px; font-family:arial,sans-serif; color:#FFF; background-color:#32638e;
+    border: 1px solid #000; border-width:1px; padding: 1px 3px 1px 3px; }
+/** Text Settings ------------------------------------------------------------------------ */
+h1 {
+    font-size: 12pt;}
+h2 {
+    font-size: 10pt; margin-bottom: 6px;}
+h3 {
+    font-size: 11pt; margin-bottom: 6px;}
+font.gray {
+    color: #ACA899; text-decoration: underline;}
+.important {
+    font-weight: bold; font-size: 8pt; }
+.red {
+    color: #ee0000;}
+.yellow {
+    color: #997700;}
+.green {
+    color: #000000;}
+.small {
+    font-size: 7pt;}
+.big {
+    font-size: 10pt;}
+p#statusgreen { 
+    font-size: 1.2em; background-color: #fff; color: #0a0; }
+p#statusred { 
+    font-size: 1.2em; background-color: #fff; color: #a00; }
+/** Basic Tabel Settings ----------------------------------------------------------------- */
+table {
+    border-collapse: collapse; border: none;
+    background-color: #dbe3ea; }
+table.main, table.mainouter {
+    border:  none; background-color: transparent;}
+table.bottom {
+    background: transparent;}
+p {
+    font-size: 8pt;}
+p.sub { 
+    margin-bottom: 4pt;}
+td {
+    font-size: 8pt; border: solid #000000 0px;}
+td.embedded {
+    border: none; padding: 0px; text-align: left;}
+td.bottom {
+    border: none;}
+td.heading {
+    font-weight: bold;}
+td.text {
+    padding: 10pt; text-align: left; background-color: transparent;}
+td.comment {
+    padding: 10pt; font-size: 8pt; text-align: left;}
+td.rowhead {
+    font-weight: bold; text-align: right; vertical-align: top; background-color: transparent;}
+td.title {
+    font-size: 14pt;}
+td.navigation {
+    font-weight: bold; font-size: 10pt; border: none;}
+td.clear {
+    padding: 0px; border: 0px; background: transparent; }
+td.clearalt6 {
+    background: #004E98; padding: 5px; border: 0px; border: hidden;}
+td.clearalt7 {
+    padding: 5px; background: #777777; border: 0px; border: hidden;}
+td.colhead { height: 30px; font-weight: bold; color: #ffffff; border: 1px solid #000; background: url('images/head_bg.png');}
+td.normal {
+    background: #990000; }
+td.normalrowhead {
+    font-weight: bold; text-align: right; background: #990000; }
+.listitem {
+    margin-left:10px; margin-right:3px;}
+td.pager { 
+    background-color: lightblue; border: 1px solid #9CA4B0; padding: 1px; }
+td.pagebr {  
+    border: 0px; padding: 0px; }
+td.highlight { 
+    background-color: #94DFFF; border: 1px solid #9CA4B0; padding: 1px; }
+tr.browse:nth-child(even) {
+	background-color: #E0F0FF;}
+tr.browse:hover {
+ background-color: #dbe3ea;}
+/** Forum Settings ----------------------------------------------------------------------- */
+.forumtable {
+    width: 100%; margin: 0; padding: 0; font-size: 8pt;
+    border: 0px solid #ccc; border-collapse: collapse;
+    background-color: white;}
+/** Header Settings ---------------------------------------------------------------------- */
+div#base_logo {
+    width: 328px; height: 82px; background: url(images/logo.png) none;}
+div#base_header_line {
+    width: 988px; height: 10px; background: #23446d;}
+div#base_header {
+    width: 988px; height: 85px; 
+    /*background: url(images/head_bg.png) repeat-x;*/
+    background: #183859; 
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#183859), to(#32638e));
+    background: -moz-linear-gradient(100% 100% 90deg, #183859, #32638e); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32638e', endColorstr='#183859',GradientType=0 );  }
+div#base_header_fly {
+    width: 460px; height: 30px; background: #23446d; border: 1px solid #23446d; float: right; margin-top: -7px;
+    -moz-border-radius-bottomleft: 5px; -webkit-border-radius-bottomleft: 5px; border-bottom-left-radius: 5px; }
+/** Footer Settings ---------------------------------------------------------------------- */    
+div#footer {
+    width: 1000px; margin: 0 auto; } 
+div#footer_right {
+    width: 500px; height: 35px; float:right; background: transparent !important;
+    text-align: right; color: #97bcc2; line-height: 15px; padding-top: 10px; padding-bottom: 30px; } 
+div#footer_left {
+    width: 500px; height: 35px; float:left; background: transparent !important;
+    text-align: left; color: #97bcc2; line-height: 15px; padding-top: 10px; padding-bottom: 30px; } 
+#footer_right a, #footer_right a:visited, #footer_right a:active, #footer_right a:hover {
+    color: #97bcc2; font-weight: bolder; }
+/** Menu Settings ------------------------------------------------------------------------ */
+#submenu{  
+    border: 0px solid #FFF; border-top: 0; color: #3A4F6C; 
+    margin: 0; height: 22px; text-align: right; }
+div#base_menu {
+    width: 988px; height: 35px; color: #ffffff;
+    background: #0c1a2b; /* Old browsers */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0c1a2b), to(#122843)); /* Webkit */
+    background: -moz-linear-gradient(100% 100% 90deg, #183859, #0c1a2b); /* FireFox */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c1a2b', endColorstr='#122843',GradientType=0 ); /* IE Fix */ }
+div#mover { width: 988px; margin-left: -20px; }
+ul.navigation li {
+    float: left; list-style: none; color: #ffffff; }
+.navigation li, .navigation li a {
+    height: 35px; padding-left: 5px; padding-right: 5px; cursor: pointer; line-height: 17px;
+    font: trebuchet MS; color: #ffffff;
+    text-shadow: 1px 1px 1px #000000; filter: dropshadow(color=#000000, offx=1, offy=1); }
+.navigation li:hover {
+    height: 35px; padding-left: 5px; padding-right: 5px; font: trebuchet MS; color: #ffffff;
+    text-shadow: 1px 1px 1px #000000; filter: dropshadow(color=#000000, offx=1, offy=1);  }
+span.nav:hover { 
+    padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px;
+    border: 2px solid #203f62; color: #ffffff;
+    background: #335881; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+span.nav{ 
+    padding-left: 12px; padding-right: 12px; padding-top: 7px; padding-bottom: 7px;}
+div#base_globelmessage {
+    width: 988px; height: 30px; background: #dbe3ea; border-bottom: 1px solid #9babbc;
+    text-align: left; line-height: 30px;}
+div#gm_taps {
+    float: right; padding-right: 10px; margin-top: -18px; }
+ul.gm_taps li {
+    float: left; list-style: none; }
+.gm_taps li {
+    height: 25px; padding-left: 10px; padding-right: 10px; line-height: 17px; color: #000 }
+.gm_taps a, .gm_taps a:visited, .gm_taps a:active, .gm_taps a:hover {color:#000} 
+.tooltip {
+		color: #000000; outline: none;
+		cursor: help; text-decoration: none;
+		position: relative;		}
+.tooltip span {
+	margin-left: -899em; position: absolute;		}
+.tooltip:hover span {
+	border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+	font-family: Calibri, Tahoma, Geneva, sans-serif; position: absolute; left: -10em; top: 2em; z-index: 99;
+	margin-left: 0; width: 250px;		}
+.tooltip:hover img {
+	border: 0; margin: -10px 0 0 -55px; float: left; position: absolute;}
+.tooltip:hover em {
+	font-family: Tahoma; font-size: 1.2em; font-weight: bold; display: block; padding: 0.2em 0 0.6em 0;}
+.classic { padding: 0.8em 1em; }
+.custom { padding: 0.5em 0.8em 0.8em 2em; }
+* html a:hover { background: transparent; }
+.classic {background: #FFFFAA; border: 1px solid #FFAD33; }
+.critical { background: #FFCCAA; border: 1px solid #FF3334;	}
+.help { background: #9FDAEE; border: 1px solid #2BB0D7;	}
+.info { background: #dbe3ea; border: 1px solid #97bcc2; color: #000;	}
+.warning { background: #FFFFAA; border: 1px solid #FFAD33; }
+/** Menu Links Settings ------------------------------------------------------------------ */
+#submenu a:link, #submenu  a:visited, #submenu a:hover, #submenu a:active { 
+    background: #003977; border : 1px solid #FFF; color: #FFF; 
+    padding: 1px 3px 2px 4px; margin: 0px 1px 0px 2px; text-decoration:none;}
+#submenu a:hover, #submenu a:active{
+    background: #EA5F00;}
+/** Statusbar Settings ------------------------------------------------------------------- */
+div#base_usermenu {
+    width: 220px; height: 25px; border: 1px solid #142e4e; margin-left: 10px;
+    background: #375b83; 
+    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+    text-shadow: 1px 1px 1px #000000; filter: dropshadow(color=#000000, offx=1, offy=1);
+    line-height: 25px; padding-left: 8px; color: #FFF;}
+span.base_usermenu_arrow {
+    width: 20px; height: 25px; float: right; }
+div#slidingDiv {
+    display: none; height:480px; width:228px; border: 1px solid #142e4e; border-top: none;
+	background-color: #375b83; position: absolute; margin-left: 10px; margin-top: -5px;
+    -moz-border-radius-bottomleft: 5px; -webkit-border-radius-bottomleft: 5px; border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px; -webkit-border-radius-bottomright: 5px; border-bottom-right-radius: 5px; }
+div.slide_head {
+    width: 223px; height: 25px; padding-left: 5px; float: left; background: #0f2338;
+    line-height: 25px; font-weight: bolder; text-align: left; color: #FFF}
+div.slide_a {
+    width: 100px; height: 25px; padding-left: 5px; float: left; background: #375b83;
+    line-height: 25px; font-weight: bolder; text-align: left; color: #FFF}
+div.slide_b {
+    width: 118px; height: 25px; padding-right: 5px; float: right; background: #375b83;
+    text-align: right; color: #FFF; line-height: 25px;}
+div.slide_c {
+    width: 100px; height: 25px; padding-left: 5px; float: left; background: #23446d;
+    line-height: 25px; font-weight: bolder; text-align: left; color: #FFF;}
+div.slide_d {
+    width: 118px; height: 25px; padding-right: 5px; float: right; background: #23446d;
+    text-align: right; color: #FFF; line-height: 25px;}
+ul.um_menu li {
+    float: left; list-style: none; }
+.um_menu li {
+    height: 25px; padding-left: 10px; padding-right: 10px; cursor: pointer; line-height: 17px;
+    text-shadow: 1px 1px 1px #000000; filter: dropshadow(color=#000000, offx=1, offy=1);  }
+div#base_icons {
+    float: right; width: 210px; margin-top: -32px;}
+/** Pagination Links Settings ------------------------------------------------------------ */
+.pagelink, .pagelinklast, .pagecurrent, .minipagecurrent, .minipagelink, .minipagelinklast{
+    background: #F0F5FA; border: 1px solid #072A66; padding: 1px 3px 1px 3px;}
+.pagelinklast, .minipagelinklast{
+    background: #DFE6EF;}
+.pagecurrent{
+    background: #FFC9A5;}
+.minipagecurrent{
+    background: #F0F5FA; font-size: 10px;}
+.minipagelink, .minipagelinklast{
+    border: 1px solid #C2CFDF; font-size: 10px; margin: 0 1px 0 0;}
+.pagelink a:active, .pagelink a:visited, .pagelink a:link, .pagelinklast a:active,
+.pagelinklast a:visited, .pagelinklast a:link, .pagecurrent a:active,
+.pagecurrent a:visited, .pagecurrent a:link, .minipagelink a:active, .minipagelink a:visited,
+.minipagelink a:link, .minipagelinklast a:active, .minipagelinklast a:visited, .minipagelinklast a:link{
+    text-decoration: none;}
+.pagination{
+    padding:3px; margin:3px; text-align:center; }
+.pagination ul{
+    margin: 0; padding: 0; text-align: right; font-size: 10px; }
+.pagination li{
+    list-style-type: none; display: inline; padding-bottom: 1px; }
+.pagination a, .pagination a:visited{
+    padding: 0 2px; border: 1px solid #9aafe5; text-decoration: none; color: #2e6ab1; }
+.pagination a:hover, .pagination a:active{
+    border: 1px solid #2b66a5; color: #000; background-color: #30C636; }
+.pagination a.currentpage{
+    background-color: #2e6ab1; color: #FFF !important; border-color: #2b66a5;
+    font-weight: bold; cursor: default;}
+.pagination a.disablelink, .pagination a.disablelink:hover{
+    background-color: white; cursor: default; color: #929292; border-color: #929292; font-weight: normal !important;}
+.pagination a.prevnext{
+    font-weight: bold;}
+/** Cpatcha Links Settings ------------------------------------------------------------ */
+.cimage { 
+    border: 1px solid #eee; }
+.captchaImage {
+    margin:0 2px;}
+.captchaImages { 
+    margin: 5px auto;width:350px;text-align:center;}
+.simpleCaptchaSelected {
+    border: 2px solid #999; -moz-border-radius: 3px; -webkit-border-radius: 3px; } 
+/** Status Settings ------------------------------------------------------------------- */
+#status_box, #status_title_warpper, #status_content {
+	font-family:tahoma; font-size:12px; }
+#status_box {
+	width:400px; background: #ffffff; height:auto; border:1px solid #5C8DFF;
+	-moz-border-radius:4px; padding:8px; position:absolute; margin-top:10px; maring-bottom:5px; }
+#status_title {
+    background:#99B8FF; height:16px; color:#333; padding-left:5px; font-weight:bold; }
+#status_content{
+	padding:1px; background: #ffffff; border: 1px solid #99B8FF; -moz-border-radius-bottomleft:2px;
+	-moz-border-radius-bottomright:2px; }
+#status_tool { 
+    font-size:10px;font-weight:bold;}
+tr.browse:nth-child(odd) {
+	background-color:#DE0029;}     
+/** Info box Settings ----------------------------------------------------------------- */    
+ul.globelmessage li {
+    float: left; list-style: none; }
+.globelmessage li {
+    height: 30px; padding-left: 5px; padding-right: 5px; cursor: pointer; line-height: 17px;
+    text-shadow: 1px 1px 1px #000000; filter: dropshadow(color=#000000, offx=1, offy=1);  }
+.globelmessage li:hover {
+    height: 30px; padding-left: 5px; padding-right: 5px;
+    text-shadow: 1px 1px 1px #000000; filter: dropshadow(color=#000000, offx=1, offy=1);  }  
+div.info_box {
+   width: 960px; height: 20px; padding-left: 25px;
+   background: #dbe3ea ; border: 1px solid #97bcc2 ;padding: 3px;}
+p.redalert {
+	background: #fff6bf url(images/alertred.png) center no-repeat;
+	background-position: 15px; text-align: left; padding: 5px 20px 5px 45px;
+	border: 1px solid #ffd324; width: 600px; margin:0 auto;  margin-top: 10px; margin-bottom: 10px;}   
+p.bluealert {
+	background: #dbe3ea url(images/alertblue.png) center no-repeat;
+	background-position: 15px; text-align: left; padding: 5px 20px 5px 45px;
+	border: 1px solid #97bcc2; width: 600px; margin:0 auto;  margin-top: 0px; margin-bottom: 10px; }  
+/** ----------------------------------------------------------------------------------- */
+/** Settings For Pages in installer09-------------------------------------------------- */
+/** ----------------------------------------------------------------------------------- */
+
+/** Index.php Settings ---------------------------------------------------------------- */
+div.headline {
+    width: 957px; height: 30px; text-align: left; padding-left: 10px; color: #ffffff;
+    line-height: 30px; font-weight: bolder; border: 1px solid #97bcc2;
+    background: #183859; 
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#183859), to(#32638e));
+    background: -moz-linear-gradient(100% 100% 90deg, #183859, #32638e); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32638e', endColorstr='#183859',GradientType=0 );  }
+div.headbody {
+    width: 947px; text-align: left; padding: 10px 10px 10px 10px; border: 1px solid #97bcc2;
+    border-top:none; background: #e8ecf1; margin-bottom: 10px; }
+div.headbody2 {
+    width: 947px; text-align: center; padding: 10px 10px 10px 10px; border: 1px solid #97bcc2;
+    border-top:none; background: #e8ecf1; margin-bottom: 10px; }
+
+/* tooltip */
+div.headline2 {
+    width: 610px; height: 30px; text-align: left; padding-left: 10px; color: #ffffff;
+    line-height: 30px; font-weight: bolder; border: 1px solid #97bcc2;
+    background: #183859; 
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#183859), to(#32638e));
+    background: -moz-linear-gradient(100% 100% 90deg, #183859, #32638e); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32638e', endColorstr='#183859',GradientType=0 );  }
+div.headbody3 {
+    width: 600px; text-align: left; padding: 10px 10px 10px 10px; border: 1px solid #97bcc2;
+    border-top:none; background: #e8ecf1; margin-bottom: 10px; }
+ 
+.headbody a, .headbody a:visited, .headbody a:active {
+    text-decoration: none; color: #000; }
+.headbody a:hover {
+    text-decoration: none; color: #303030;}
+span.shouthis {
+    float: right; padding-right: 10px;}
+span.shoutextra{
+    float: right; padding-right: 10px; line-height: 21px;}
+span.news {
+    float: right; padding-right: 10px; line-height: 30px;}
+span.news a, span.news a:visited, span.news a:active {
+    text-decoration: none; color: #1a3b5d; }
+span.news a:hover {
+    text-decoration: none; color: #376c9a; }
+div.newshead {
+    width: 937px; text-align: left; border: 1px solid #97bcc2;
+    background: #c4d0df; color:#FFF; padding: 5px;}
+td.newshead {
+    width: 937px; text-align: left; border: 1px solid #97bcc2;
+    background: #c4d0df; color:#FFF; padding: 5px;}
+div.news_space { background:transparent; height:20px; }
+div.news_button {
+    width: 100px; float: right; margin-right: -50px;}
+pre.enfo {
+	font-size:9pt;
+	font-family: 'Courier New', monospace;
+	line-height:normal;}    
+/** Browse.php Settings --------------------------------------------------------------- */
+.tag_cloud{
+    padding: 3px; text-decoration: none; font-family: arial; }
+.tag_cloud:link  { 
+    color: #0099FF; text-decoration:none;}
+.tag_cloud:visited { 
+    color: #00CCFF; }
+.tag_cloud:hover { 
+    color: #0000FF; background: #00CCFF; }
+.tag_cloud:active { 
+    color: #0000FF; background: #FFFFFF; }
+.highlight {
+  background-color:#000000;}
+.highlight a:hover, .highlight a:active {
+  color:#000000;   background-color:#FF9812; }
+/** Forums.php Settings --------------------------------------------------------------- */
+.forumrules_title {
+    background-color: #7192b2; font-size: 14px; color: #fff; padding: 7px; margin-bottom: 4px; }
+.forumrules_border {
+    border:1px solid #e2e2e0; padding:4px; }
+.forumrules_text_border {
+    border:1px solid #e2e2e0; padding:4px;}
+.forumrules_text {
+    background-color: #FFFF99; font-size: 14px; color: #000; }
+.tbdev_forum{
+    background: #890537;}
+.tbdev_forum1{
+    background: #890537;}
+/** Staff.php Settings --------------------------------------------------------------- */
+td.staff_username {
+    width: 500px; height: 30px;
+    text-align: left; border: none}
+td.staff_online {
+    width: 80px; height: 30px;
+    text-align: center; border: none }
+div.global_icon {
+    width: 55px; height: 29px;
+    text-align: center; padding-top: 6px;
+    background: -moz-linear-gradient(100% 100% 90deg, #9c9b9b, #cfcfcf);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9c9b9b), to(#cfcfcf));
+    -moz-border-radius-topleft: 8px; -webkit-border-radius-topleft: 8px; border-top-left-radius: 8px;
+    float: left; display:inline; border-color: #eae9e9;}
+div.global_head {
+    width: 730px; height: 35px; margin-right: 10px;
+    text-align: left; color: #474747; font-size: 15px; font-weight: bolder;
+    background: -moz-linear-gradient(100% 100% 90deg, #c1c0c0, #d9d8d8);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#c1c0c0), to(#d9d8d8));
+    -moz-border-radius-topright: 8px; -webkit-border-radius-topright: 8px; border-top-right-radius: 8px;
+    float:  right; display: block; line-height: 34px; border-color: #eae9e9;
+    padding-left: 20px; }
+div.global_text {
+    width: 775px; text-align: left; color: #474747; background: #e1e0e0; margin-bottom: 20px; padding:15px;
+    -moz-border-radius-bottomright: 8px; -webkit-border-radius-bottomright: 8px; border-bottom-right-radius: 8px;
+    -moz-border-radius-bottomleft: 8px; -webkit-border-radius-bottomleft: 8px; border-bottom-left-radius: 8px;}
+
+/** BROWSE Settings --------------------------------------------------------------- */
+div#b_around {
+    width: 775px; }
+
+
+/** .php Settings --------------------------------------------------------------- */
+#keyboardInputMaster {
+  position:absolute;
+  border:2px groove #dddddd;
+  color:#000000;
+  background-color:#dddddd;
+  text-align:left;
+  z-index:1000000;
+  width:auto;
+}
+
+#keyboardInputMaster thead tr th {
+  text-align:left;
+  padding:2px 5px 2px 4px;
+  background-color:inherit;
+  border:0px none;
+}
+#keyboardInputMaster thead tr th select,
+#keyboardInputMaster thead tr th label {
+  color:#000000;
+  font:normal 11px Arial,sans-serif;
+}
+#keyboardInputMaster thead tr td {
+  text-align:right;
+  padding:2px 4px 2px 5px;
+  background-color:inherit;
+  border:0px none;
+}
+#keyboardInputMaster thead tr td span {
+  padding:1px 4px;
+  font:bold 11px Arial,sans-serif;
+  border:1px outset #aaaaaa;
+  background-color:#555555;
+  cursor:pointer;
+}
+#keyboardInputMaster thead tr td span.pressed {
+  border:1px inset #999999;
+  background-color:#bbbbbb;
+}
+
+#keyboardInputMaster tbody tr td {
+  text-align:left;
+  margin:0px;
+  padding:0px 4px 3px 4px;
+}
+#keyboardInputMaster tbody tr td div {
+  text-align:center;
+  position:relative;
+  height:0px;
+}
+#keyboardInputMaster tbody tr td div#keyboardInputLayout {
+  height:auto;
+}
+#keyboardInputMaster tbody tr td div#keyboardInputLayout table {
+  height:20px;
+  white-space:nowrap;
+  width:100%;
+  border-collapse:separate;
+}
+#keyboardInputMaster tbody tr td div#keyboardInputLayout table.keyboardInputCenter {
+  width:auto;
+  margin:0px auto;
+}
+#keyboardInputMaster tbody tr td div#keyboardInputLayout table tbody tr td {
+  vertical-align:middle;
+  padding:0px 5px 0px 5px;
+  white-space:pre;
+  font:normal 11px 'Lucida Console',monospace;
+  border-top:1px solid #e5e5e5;
+  border-right:1px solid #5d5d5d;
+  border-bottom:1px solid #5d5d5d;
+  border-left:1px solid #e5e5e5;
+  background-color:#777777;
+  cursor:default;
+}
+#keyboardInputMaster tbody tr td div#keyboardInputLayout table tbody tr td.last {
+  width:99%;
+}
+#keyboardInputMaster tbody tr td div#keyboardInputLayout table tbody tr td.alive {
+  background-color:#ccccdd;
+}
+#keyboardInputMaster tbody tr td div#keyboardInputLayout table tbody tr td.target {
+  background-color:#ddddcc;
+}
+#keyboardInputMaster tbody tr td div#keyboardInputLayout table tbody tr td.hover {
+  border-top:1px solid #d5d5d5;
+  border-right:1px solid #555555;
+  border-bottom:1px solid #555555;
+  border-left:1px solid #d5d5d5;
+  background-color:#555555;
+}
+#keyboardInputMaster tbody tr td div#keyboardInputLayout table tbody tr td.pressed,
+#keyboardInputMaster tbody tr td div#keyboardInputLayout table tbody tr td.dead {
+  border-top:1px solid #555555;
+  border-right:1px solid #d5d5d5;
+  border-bottom:1px solid #d5d5d5;
+  border-left:1px solid #555555;
+  background-color:#555555;
+}
+
+#keyboardInputMaster tbody tr td div var {
+  position:absolute;
+  bottom:0px;
+  right:0px;
+  font:bold italic 11px Arial,sans-serif;
+  color:#777777;
+}
+
+.keyboardInputInitiator {
+  margin-left:3px;
+  vertical-align:middle;
+  cursor:pointer;
+}
+div#wiki-container {
+display: table;
+width: 100%;
+}
+
+div#wiki-row {
+display: table-row;
+}
+
+div#wiki-navigation {
+margin: 2px;
+padding: 2px;
+border: 0px solid #303030;
+background-color: #97bcc2;
+}
+
+div#wiki-content-left div#content-add {
+text-align: center;
+}
+
+div#wiki-content-left textarea#body {
+width: 90%;
+height: 300px;
+}
+
+div#wiki-content-left {
+display: table-cell;
+}
+
+div#wiki-content-right {
+display: table-cell;
+width: 250px;
+padding-left: 10px;
+}
+
+div#wiki-content-left div#name, div#content, div#content-add {
+margin: 2px;
+padding: 2px;
+border: 0px solid #303030;
+background-color: #97bcc2;
+}
+
+div#wiki-content-left div#name {
+width: 80%;
+text-align: center;
+font-size: 18px;
+}
+
+div#wiki-content-left div#content, div#content-add {
+width: 80%;
+text-align: left;
+}
+
+div#wiki-content-right div#search, div#details {
+margin: 2px;
+padding: 2px;
+border: 0px solid #303030;
+background-color: #97bcc2;
+}
+
+div#wiki-content-right div#search, div#details {
+width: 250px;
+}
+
+div.wiki-search {
+margin: 2px;
+padding: 2px;
+border: 0px solid #303030;
+background-color: #97bcc2;
+}
+/** ----------------------------------------------------------------------------------- */
+/** Information About This File ------------------------------------------------------- */
+/** -----------------------------------------------------------------------------------
+    This file is a part of installer09 sourcecode. Show us some respect for all this free
+    work we have done here for you, and leave all credit in the codes.
+    By removing ANY credits from these files you not allowed to get any support on the source
+    
+    Thanks for using this sourcecode.
