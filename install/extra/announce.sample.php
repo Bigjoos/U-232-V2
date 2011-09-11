@@ -8,6 +8,7 @@
  **/
 error_reporting(0);
 ////////////////// GLOBAL VARIABLES ////////////////////////////	
+$finished = $finished1 = '';
 $INSTALLER09['baseurl'] = '#baseurl';
 $INSTALLER09['announce_interval'] = 60 * 30;
 $INSTALLER09['connectable_check'] = 1;
@@ -43,7 +44,7 @@ $INSTALLER09['cache'] = dirname(__FILE__).DIRECTORY_SEPARATOR.'cache'.DIRECTORY_
    if (isset($_SERVER['HTTP_COOKIE']) || isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) || isset($_SERVER['HTTP_ACCEPT_CHARSET']))
    exit('It takes 46 muscles to frown but only 4 to flip \'em the bird.');
    /////////////////////// FUNCTION DEFS ///////////////////////////////////
-   /*
+   
    function crazyhour_announce() {
    global $INSTALLER09;
    $crazyhour_filename = $INSTALLER09['cache'].'crazy_hour.txt';
@@ -61,17 +62,16 @@ $INSTALLER09['cache'] = dirname(__FILE__).DIRECTORY_SEPARATOR.'cache'.DIRECTORY_
         fwrite($fp, $crazyhour['crazyhour']['var']);
         fclose($fp); 
         /** log, shoutbot **/
-        //$text = 'Next Crazyhour is at '.$crazyhour['crazyhour'];
-        /*
+        $text = 'Next Crazyhour is at '.$crazyhour['crazyhour'];
         mysql_query('INSERT INTO sitelog (added, txt) VALUES('.TIME_NOW.', '.sqlesc($text).')') or err("Crazyhour Err");     
-        //mysql_query('INSERT INTO shoutbox (userid, date, text, text_parsed) VALUES (2, '.TIME_NOW.', '.sqlesc($text).', '.sqlesc($text).')') or err("Crazyhour Err 1");
+        mysql_query('INSERT INTO shoutbox (userid, date, text, text_parsed) VALUES (2, '.TIME_NOW.', '.sqlesc($text).', '.sqlesc($text).')') or err("Crazyhour Err 1");
         return false;
         }
         else
         return false;
         }
 	      // crazyhour end
-*/
+
 
 
 function auto_enter_cheater($userid, $rate, $upthis, $diff, $torrentid, $client, $ip, $last_up)
@@ -402,17 +402,17 @@ else
    }
    }
    
-   //$crazyhour = crazyhour_announce();
-   //$crazyhour ||
-    
-   if (!($user['free_switch'] != 0 || $isfree || $torrent['free'] != 0 || $SitePot['value_u'] >= 10000 || $torrent['vip'] != 0 || ($torrent['freeslot'] != 0)))
+   $crazyhour = crazyhour_announce();
+   if (!($crazyhour || $user['free_switch'] != 0 || $isfree || $torrent['free'] != 0 || $SitePot['value_u'] >= 10000 || $torrent['vip'] != 0 || ($torrent['freeslot'] != 0)))
    $updq[0] = "downloaded = downloaded + $downthis";
-   //if ($crazyhour) // crazyhour
-   //$updq[1]="uploaded = uploaded + ($upthis*3)";
-   //else
+   if ($crazyhour) // crazyhour
+   $updq[1]="uploaded = uploaded + ($upthis*3)";
+   else
    $updq[1] = "uploaded = uploaded + ".(($torrent['doubleslot'] != 0 || $isdouble) ? ($upthis*2) : $upthis);
    $udq=implode(',',$updq);
    mysql_query("UPDATE users SET $udq WHERE id=".$user['id']) or err('Tracker error 3');
+   $mc1->delete_value('MyUser_'.$user['id']);
+   $mc1->delete_value('user'.$user['id']);
    }
 
       //=== abnormal upload detection
@@ -455,7 +455,7 @@ else
     }
 		}
  
- $finished = $finished1 = '';
+ 
  $updateset = array();
  
  //== NoReport sends event=stopped in combination with numwant greater 0 everytime
