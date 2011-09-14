@@ -361,7 +361,7 @@ else
   $downspeed = ($downthis > 0 ? $downthis / $self["announcetime"] : 0);
   $announcetime = ($self["seeder"] == "yes" ? "seedtime = seedtime + $self[announcetime]" : "leechtime = leechtime + $self[announcetime]");
   //==sitepot
-  $Pot_query = mysql_query("SELECT value_u FROM avps WHERE arg = 'sitepot'") or err("Sitepot Err");
+  $Pot_query = mysql_query("SELECT value_i FROM avps WHERE arg = 'sitepot'") or err("Sitepot Err");
   $SitePot = mysql_fetch_assoc($Pot_query);
   ///////////////////happyhour by putyn
   $happy = mysql_query( "SELECT id, multiplier from happyhour where userid=" . sqlesc( $userid ) . " AND torrentid=" . sqlesc( $torrentid ) . " " );
@@ -403,7 +403,7 @@ else
    }
    
    $crazyhour = crazyhour_announce();
-   if (!($crazyhour || $user['free_switch'] != 0 || $isfree || $torrent['free'] != 0 || $SitePot['value_u'] >= 10000 || $torrent['vip'] != 0 || ($torrent['freeslot'] != 0)))
+   if (!($crazyhour || $user['free_switch'] != 0 || $isfree || $torrent['free'] != 0 || $SitePot['value_i'] >= 10000 || $torrent['vip'] != 0 || ($torrent['freeslot'] != 0)))
    $updq[0] = "downloaded = downloaded + $downthis";
    if ($crazyhour) // crazyhour
    $updq[1]="uploaded = uploaded + ($upthis*3)";
