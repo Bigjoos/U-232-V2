@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $do == "addpromo")
 						sql_query("update promo set accounts_made=accounts_made+1 , users=".sqlesc($users)." WHERE id=".$ar_check["id"]) or sqlerr(__FILE__, __LINE__);
 						
 						//==Email part :)
-						$md5 = md5($editsecret);
+						$md5 = $editsecret; // Removed the md5 as its not in the confirm page also takesignup is not using md5
 						$subject = $INSTALLER09['site_name']." user registration confirmation";
 						
 						$message = "Hi!
