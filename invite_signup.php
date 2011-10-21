@@ -22,7 +22,7 @@ $newpage->create('tkIs');
 
 $res = sql_query("SELECT COUNT(*) FROM users") or sqlerr(__FILE__, __LINE__);
 $arr = mysql_fetch_row($res);
-if ($arr[0] >= $INSTALLER09['maxusers'])
+if ($arr[0] >= $INSTALLER09['invites'])
 stderr("Sorry", "The current user account limit (" . number_format($INSTALLER09['maxusers']) . ") has been reached. Inactive accounts are pruned all the time, please check back again later...");
 
 if(!$INSTALLER09['openreg_invites'])
