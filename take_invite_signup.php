@@ -18,7 +18,7 @@ $newpage = new page_verify();
 $newpage->check('tkIs');
 $res = mysql_query("SELECT COUNT(*) FROM users") or sqlerr(__FILE__, __LINE__);
 $arr = mysql_fetch_row($res);
-if ($arr[0] >= $INSTALLER09['maxusers']) 	
+if ($arr[0] >= $INSTALLER09['invites']) 	
 stderr($lang['stderr_errorhead'], sprintf($lang['stderr_ulimit'], $INSTALLER09['maxusers']));
 
 if(!$INSTALLER09['openreg_invites'])
