@@ -292,12 +292,12 @@ if (count($_POST) > 0 );//&& isset($_POST['n']))
 	  	$where_is .= !empty($where_is)?" AND (":"(";
 	    foreach($names_inc as $name)
 	    {
-      	if (!haswildcard($name))
-	        $name_is .= (!empty($name_is)?" OR ":"")."u.username = ".sqlesc($name);
+      	if (!haswildcard($name))]]]]
+	        $name_is .= (!empty($name_is)?" OR ":"")."u.username = ".$name;
 	      else
 	      {
 	        $name = str_replace(array('?','*'), array('_','%'), $name);
-	        $name_is .= (!empty($name_is)?" OR ":"")."u.username LIKE ".sqlesc($name);
+	        $name_is .= (!empty($name_is)?" OR ":"")."u.username LIKE ".$name;
 	      }
 	    }
       $where_is .= $name_is.")";
@@ -310,11 +310,11 @@ if (count($_POST) > 0 );//&& isset($_POST['n']))
 	    foreach($names_exc as $name)
 	    {
 	    	if (!haswildcard($name))
-	      	$name_is .= (isset($name_is)?" OR ":"")."u.username = ".sqlesc($name);
+	      	$name_is .= (isset($name_is)?" OR ":"")."u.username = ".$name;
 	      else
 	      {
 	      	$name = str_replace(array('?','*'), array('_','%'), $name);
-	        $name_is .= (isset($name_is)?" OR ":"")."u.username LIKE ".sqlesc($name);
+	        $name_is .= (isset($name_is)?" OR ":"")."u.username LIKE ".$name;
 	      }
 	    }
       $where_is .= $name_is.")";

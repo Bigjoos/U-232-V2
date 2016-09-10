@@ -14,8 +14,8 @@ package require http
 ## SETTINGS ##
 
 set sitename "09Source"
-set siteurl "http://09source.kicks-ass.net/ircs.php"
-set botpass "richmond1"
+set siteurl "http://yoursiteurl/ircs.php"
+set botpass ""
 set bothash  "adlsadladadll"
 
 ## BINDS ##
